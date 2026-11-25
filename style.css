@@ -1,0 +1,15 @@
+:root { color-scheme: light; background: #fff; font-family: system-ui, sans-serif; }
+* { box-sizing: border-box; }
+html, body { width: 100%; min-width: 240px; min-height: 100%; margin: 0; background: #fff; }
+body { min-height: 100svh; overflow: hidden; }
+.stage { display: grid; min-height: 100svh; place-items: center; padding: 24px; }
+.eye-button {
+  display: block; padding: 0; border: 0; outline: none; background: transparent;
+  cursor: pointer; -webkit-tap-highlight-color: transparent; touch-action: manipulation; user-select: none;
+}
+.eye-button:focus-visible { outline: 2px dashed #aeb3b5; outline-offset: 12px; }
+.eye-screen {
+  display: block; width: 480px; height: 300px; /* JS подгоняет под целое число пикселей */
+  image-rendering: pixelated; image-rendering: crisp-edges;
+  filter: drop-shadow(0 22px 26px rgba(40, 90, 200, .14));
+}
